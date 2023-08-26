@@ -1,14 +1,18 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const colors = require('colors');
+const cors = require('cors');
 
 const connectDB = require('./db/db.js');
 const apiRoutes = require('./routes');
 
+const app = express();
+
 dotenv.config();
 connectDB();
+app.use(cors());
+app.use(express.json());
 
-const app = express();
 
 app.use("/api", apiRoutes)
 

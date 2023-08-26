@@ -1,7 +1,21 @@
 
-const { getSectorList, getTopicList } = require('./listOfField_controller')
+const {
+    getList,
+    getListTypes
+} = require('./listOfField_controller')
+const {
+    getSingleData,
+    getDataWithFilter,
+    getDataFilterByYear
+} = require('./getDetails_controller')
 
 
 
 
-module.exports = { getSectorList, getTopicList };
+module.exports = {
+    getList,
+    getListTypes,
+    getSingleData,
+    getDataWithFilter,
+    getDataFilterByYear
+};

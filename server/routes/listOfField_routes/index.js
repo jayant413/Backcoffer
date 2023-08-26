@@ -1,11 +1,15 @@
 const express = require('express');
-const { getSectorList, getTopicList } = require('../../controller');
+const {
+    getList,
+    getListTypes
+} = require('../../controller');
 
 
 
 const router = express.Router();
 
-router.get("/sector", getSectorList)
-router.get("/topic", getTopicList)
+router.get("/getList/:type", getList);
+router.get("/getListTypes", getListTypes);
+
 
 module.exports = router;
